@@ -30,6 +30,8 @@ import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 
+//23.03.2026
+//Алексей
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview
 @Composable
@@ -41,6 +43,7 @@ fun prevCustomDatePicker(){
     )
 }
 
+//метод для отображения даты. Принимает заголовок, значение даты, текст даты, модификатор
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CustomDatePicker(
