@@ -2,6 +2,7 @@ package com.example.uikit
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -42,7 +43,7 @@ fun prevInput() {
         },
         placeholder = "Full Name",
         modifier = Modifier.padding(horizontal = 20.dp),
-        withTrailingIcon = true
+        withTrailingIcon = false
     )
 }
 
@@ -88,23 +89,24 @@ fun InputTF(
                     }
 
                     if (withTrailingIcon) {
-                        IconButton(
-                            onClick = {
-                                visualTransformation.value = !visualTransformation.value
-                            }
-                        ) {
-                            Icon(
-                                painter = painterResource(R.drawable.invisible_icon),
-                                contentDescription = null,
-                                tint = Color.Unspecified
-                            )
-                        }
+                        Icon(
+                            painter = painterResource(R.drawable.invisible_icon),
+                            contentDescription = null,
+                            tint = Color.Unspecified,
+                            modifier = Modifier
+                                .clickable {
+                                    visualTransformation.value = !visualTransformation.value
+                                }
+                        )
                     }
                 }
-                Box(modifier = Modifier
-                    .height(1.dp)
-                    .fillMaxWidth()
-                    .background(color = Color(0xFFFA5075)))
+                Box(
+                    modifier = Modifier
+                        .padding(top = 8.dp)
+                        .height(1.dp)
+                        .fillMaxWidth()
+                        .background(color = Color(0xFFFA5075))
+                )
             }
         }
     )
