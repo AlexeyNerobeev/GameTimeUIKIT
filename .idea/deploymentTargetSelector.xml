@@ -22,6 +22,9 @@
       <SelectionState runConfigName="prevCustomDatePicker">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="prevBottomBar">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>
